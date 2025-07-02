@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NAME: Codigofacilito
+      NAME: Lifninif
     
     steps:
       - name: Hola Mundo
-        run: echo "hola mundo"
+        run: echo "hola mundo $NAME"
 
   second_job:
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -20,4 +20,4 @@ jobs:
     
     steps:
       - name: Hola Mundo
-        run: echo "hola mundo segundo"
+        run: echo "hola mundo segundo ${{ github.ref == 'refs/heads/main' }}"
