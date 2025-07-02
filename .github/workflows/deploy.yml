@@ -9,3 +9,10 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "hola mundo"
+
+  second_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hola Mundo
+        run: echo "hola mundo segundo"
