@@ -15,7 +15,11 @@ jobs:
         run: echo "hola mundo $NAME"
       
       - name: Working dir
-        run: ls -al
+        id: step_1
+        run: echo "my_variable=hola mundo" >> $GITHUB_OUTPUT
+
+      - name: Obtener mensaje
+        run: echo "${{steps.step_1.outputs.my_variable}}"
       
       - name: Action
         uses: actions/checkout@v4
