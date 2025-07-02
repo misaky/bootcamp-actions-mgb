@@ -5,6 +5,9 @@ on: push
 jobs:
   first_job:
     runs-on: ubuntu-latest
+
+    env:
+      NAME: Codigofacilito
     
     steps:
       - name: Hola Mundo
